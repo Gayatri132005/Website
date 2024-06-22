@@ -8,41 +8,17 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export default function Home() {
-  const ref = useRef(null);
-  // const isInView = useInView(ref, { once: true });
-
-  // const mainControls = useAnimation();
-
-  // useEffect(() => {
-  //   if (isInView) {
-  //     mainControls.start("visible");
-  //   }
-  // }, [isInView]);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Set the div to visible after the component mounts
     setIsVisible(true);
   }, []);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Header />
       {/* Hero Section */}
-      <section
-        ref={ref}
-        className="min-h-screen flex flex-col items-center  bg-baige pt-16 "
-      >
+      <section className=" flex flex-col items-center w-full bg-baige pt-16 ">
         <motion.div
-          // initial="hidden"
-          // animate='visible'
-          // variants={{
-          //   hidden: { opacity: 0, y: 50},
-          //   visible: { opacity: 1, y: 0 },
-          // }}
-          // transition={{
-          //   delay: 0.20,
-          //   duration: 0.20,
-          // }}
           initial={{ opacity: 0 }}
           animate={{ opacity: isVisible ? 1 : 0 }}
           transition={{ duration: 0.35 }}
@@ -67,7 +43,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: isVisible ? 1 : 0 }}
           transition={{ duration: 0.35, delay: 0.4 }}
-          className="bg-gradient-to-b from-baige from-30% to-pastelViolet flex flex-col w-full min-h-screen "
+          className="bg-gradient-to-b from-baige from-30% to-pastelViolet flex flex-col w-full "
         >
           <Image
             width={500} // Use the width and height of your image
@@ -79,7 +55,6 @@ export default function Home() {
         </motion.div>
       </section>
       <section className="min-h-screen bg-pastelGreen w-full"></section>
-
       <Footer />
     </main>
   );
