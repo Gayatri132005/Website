@@ -15,7 +15,7 @@ function Header(): JSX.Element {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <header className="sticky inset-x-0 top-0 z-20">
+    <header className=" inset-x-0 top-0 z-20">
       {/* For Large Screen */}
       <div className="flex flex-row justify-around  border-b-2   border-slate-300 items-center w-screen  bg-baige shadow-black">
         <Link href={"/"} className="hidden md:flex">
