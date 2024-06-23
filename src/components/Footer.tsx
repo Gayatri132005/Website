@@ -34,9 +34,9 @@ function Footer(): JSX.Element {
       <>
         <motion.div
           ref={footerRef}
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, y: 0 }}
           animate={controls}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.2, y: 90 }}
           className="flex flex-col  md:w-[40%] md:mr-28"
         >
           <h2 className="font-bold my-4">DB</h2>
@@ -67,7 +67,7 @@ function Footer(): JSX.Element {
           ref={footerRef}
           initial={{ opacity: 0 }}
           animate={controls}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
           className="flex flex-col gap-2 mt-4"
         >
           <h4 className="font-bold">Help and Support</h4>
