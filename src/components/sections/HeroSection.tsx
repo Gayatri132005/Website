@@ -16,7 +16,7 @@ function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.35 }}
-        className="header-content md:w-[60%] justify-center items-center flex flex-col px-6 "
+        className="header-content md:w-[70%] justify-center items-center flex flex-col px-6 "
       >
         <h1 className="text-center font-semibold mb-3  leading-tight">
           India&apos;s first integrated drone service company .

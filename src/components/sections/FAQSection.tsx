@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/accordion";
 function FAQSection() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-around py-16  w-full bg-pastelBlue px-6">
+    <section className="flex flex-col md:flex-row items-center justify-around pb-16  md:pt-40 pt-56  w-full bg-pastelBlue px-6">
       <div>
         <h2 className="font-bold">See Common Question</h2>
         <h2 className="font-bold">and Answer</h2>
