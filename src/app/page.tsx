@@ -6,6 +6,7 @@ import ProcessSection from "@/components/sections/ProcessSection";
 import FAQSection from "@/components/sections/FAQSection";
 import HeroSection from "@/components/sections/HeroSection";
 import ContactUsSection from "@/components/sections/ContactUsSection";
+import WhyDB from "@/components/sections/WhyDB";
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
       <Header />
       <HeroSection />
       <ProcessSection />
+      {/* Why us section */}
+      <WhyDB />
       <FAQSection />
       <ContactUsSection />
       <Footer />

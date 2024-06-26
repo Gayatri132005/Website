@@ -45,7 +45,7 @@ const Card = ({
           background: color,
           scale,
           top: `${
-            md ? `calc(-5vh + ${i * 90}px)` : `calc(-5vh + ${i * 110}px)`
+            md ? `calc(-5vh + ${i * 90}px)` : `calc(-5vh + ${i * 100}px)`
           }`,
         }}
       >
