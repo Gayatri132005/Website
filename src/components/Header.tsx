@@ -7,7 +7,7 @@ function Header(): JSX.Element {
   return (
     <header className=" inset-x-0 top-0 z-20">
       {/* For Large Screen */}
-      <div className="flex flex-row justify-around shadow-2   border-slate-300 items-center w-screen  bg-baige shadow-black">
+      <div className="flex flex-row justify-around shadow-2   border-slate-300 items-center   bg-baige shadow-black">
         <Link href={"/"} className="hidden md:flex">
           <h2 className="py-6 font-bold mx-2 ">DB</h2>
           

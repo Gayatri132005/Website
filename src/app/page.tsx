@@ -7,15 +7,16 @@ import FAQSection from "@/components/sections/FAQSection";
 import HeroSection from "@/components/sections/HeroSection";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import WhyDB from "@/components/sections/WhyDB";
+import Steps from "@/components/sections/Steps";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className=" min-h-screen ">
       <Header />
       <HeroSection />
       <ProcessSection />
-      {/* Why us section */}
       <WhyDB />
+      <Steps />
       <FAQSection />
       <ContactUsSection />
       <Footer />

@@ -24,18 +24,12 @@ function ObjectiveCard({
         opacity: 1,
         x: 0, // Slide in to its original position
         transition: {
-          duration: 0.5, // Animation duration
+          duration: 0.75, // Animation duration
         },
       }}
       viewport={{ once: true }}
       className="  rounded-xl md:w-[40%]  flex flex-col gap-2  "
     >
-      {/* <Users
-        className="rounded-full bg-pastelViolet p-4"
-        color="black"
-        width={65}
-        height={65}
-      /> */}
       {icon}
       <h3 className="font-bold">{title}</h3>
       <p>{desc}</p>
