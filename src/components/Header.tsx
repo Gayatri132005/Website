@@ -15,6 +15,7 @@ function Header(): JSX.Element {
           <p className="font-semibold">Home</p>
           <p className="font-semibold">Lifecycle</p>
           <p className="font-semibold">Features</p>
+          <a href="#advantages" className="font-semibold">Advantages</a>
           <p className="font-semibold">FAQ</p>
           <p
             className="font-semibold"
