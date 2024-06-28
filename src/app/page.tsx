@@ -19,25 +19,20 @@ export default function Home() {
       <HeroSection />
       <ProcessSection />
       <WhyDB />
-      {md ? (
-        <>
-          <Steps />
-        </>
-      ) : (
-        <section className="flex px-4 flex-col py-16">
-          <h2 className=" font-bold ">How do we do it?</h2>
-          {HowWeDoIt.map((item) => (
-            <div
-              className="flex flex-col items-center justify-center py-6 gap-6"
-              key={item.title}
-            >
-              {item.icon}
-              <h3 className="font-bold">{item.title}</h3>
-              <p className="text-center">{item.desc}</p>
-            </div>
-          ))}
-        </section>
-      )}
+      <Steps />
+      <section className="flex md:hidden px-6 flex-col py-16">
+        <h2 className=" font-bold ">How do we do it?</h2>
+        {HowWeDoIt.map((item) => (
+          <div
+            className="flex flex-col items-center justify-center py-6 gap-6"
+            key={item.title}
+          >
+            {item.icon}
+            <h3 className="font-bold">{item.title}</h3>
+            <p className="text-center">{item.desc}</p>
+          </div>
+        ))}
+      </section>
 
       <Advantages />
       <FAQSection />

@@ -47,7 +47,7 @@ function Steps(): JSX.Element {
       <section className="mx-auto hidden md:block  max-w-6xl px-4">
         {/* <h2 className="text-start self-start font-bold">How do we do it?</h2> */}
         <div className="flex w-full items-start gap-20">
-          <div className="w-full py-[50vh] ">
+          <div className="w-full py-[20svh] ">
             <ul>
               <h2 className=" font-bold pb-40">How do we do it?</h2>
               {HowWeDoIt.map((item) => (

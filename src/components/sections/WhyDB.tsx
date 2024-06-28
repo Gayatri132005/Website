@@ -1,12 +1,10 @@
 import { CalendarCheck, Languages, ShieldCheck, Users } from "lucide-react";
-import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
 import ObjectiveCard from "../ui/ObjectiveCard";
 
 function WhyDB(): JSX.Element {
   return (
-    <section className="md:pt-56 pt-56 flex flex-col w-full min-h-screen p-10 md:p-60 gap-10 bg-baige  ">
+    <section className="md:pt-56 pt-56 flex flex-col w-full min-h-screen p-10 md:px-60 md:pb-32 gap-10 bg-baige  ">
       <h2 className=" font-bold ">Our Objectives</h2>
       <div className=" flex flex-col md:flex-row items-start justify-between gap-10 md:gap-0 ">
         <ObjectiveCard
