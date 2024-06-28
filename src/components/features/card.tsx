@@ -2,6 +2,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import React from "react";
 import { useFeatureStore } from "./Store";
+import { HandCoins, Handshake, MonitorSmartphone } from "lucide-react";
 
 type FeatureCardProps = {
   gradient: string;
@@ -18,7 +19,7 @@ const FeatureCard = ({ gradient, children, id }: FeatureCardProps) => {
   return (
     <div
       className={classNames(
-        `absolute inset-0 w-full h-full rounded-2xl  bg-gradient-to-br opacity-0 transition-opacity`,
+        `absolute inset-0 md:w-full md:h-full rounded-2xl flex flex-col items-center  justify-center  bg-gradient-to-br opacity-0 transition-opacity`,
         gradient,
         inViewFeature === id ? "opacity-100" : "opacity-0"
       )}
@@ -31,28 +32,32 @@ const FeatureCard = ({ gradient, children, id }: FeatureCardProps) => {
 export const Step1 = ({ id }: CardProp) => {
   return (
     <FeatureCard id={id} gradient="from-[#f7f0ff] to-[#a78afe]">
-      <span />
+      <Handshake width={80} height={80} />
+      <h3 className="font-bold">Step 1</h3>
     </FeatureCard>
   );
 };
 export const Step2 = ({ id }: CardProp) => {
   return (
     <FeatureCard id={id} gradient="from-[#f5fbff] to-[#addeff]">
-      <span />
+      <MonitorSmartphone width={80} height={80} />
+      <h3 className="font-bold">Step 2</h3>
     </FeatureCard>
   );
 };
 export const Step3 = ({ id }: CardProp) => {
   return (
     <FeatureCard id={id} gradient="from-[#f5fff7] to-[#adf8ff]">
-      <span />
+      <Image src="/customer-care-icon.svg" alt="step2" width={80} height={80} />
+      <h3 className="font-bold">Step 3</h3>
     </FeatureCard>
   );
 };
 export const Step4 = ({ id }: CardProp) => {
   return (
     <FeatureCard id={id} gradient="from-[#f7fff5] to-[#adffd8]">
-      <span />
+      <HandCoins width={80} height={80} />
+      <h3 className="font-bold">Step 4</h3>
     </FeatureCard>
   );
 };

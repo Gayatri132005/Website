@@ -6,7 +6,7 @@ import ObjectiveCard from "../ui/ObjectiveCard";
 
 function WhyDB(): JSX.Element {
   return (
-    <section className="md:pt-56 pt-56 flex flex-col w-full min-h-screen p-10 md:p-60 gap-10  ">
+    <section className="md:pt-56 pt-56 flex flex-col w-full min-h-screen p-10 md:p-60 gap-10 bg-baige  ">
       <h2 className=" font-bold ">Our Objectives</h2>
       <div className=" flex flex-col md:flex-row items-start justify-between gap-10 md:gap-0 ">
         <ObjectiveCard

@@ -10,7 +10,6 @@ function Header(): JSX.Element {
       <div className="flex flex-row justify-around shadow-2   border-slate-300 items-center   bg-baige shadow-black">
         <Link href={"/"} className="hidden md:flex">
           <h2 className="py-6 font-bold mx-2 ">DB</h2>
-          
         </Link>
         <div className="hidden md:flex flex-col text-lg items-center md:flex-row gap-8">
           <p className="font-semibold">Home</p>
