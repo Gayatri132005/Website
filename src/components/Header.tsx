@@ -16,7 +16,7 @@ function Header(): JSX.Element {
   };
 
   return (
-    <header className=" inset-x-0 top-0 z-20 ">
+    <header >
       {/* For Large Screen */}
       <div className="flex flex-row justify-around shadow-2 p-4   border-slate-300 items-center   bg-baige shadow-black">
         <Link href={"/"} className="hidden md:flex">
@@ -68,7 +68,7 @@ function Header(): JSX.Element {
         </div>
       </div>
       {/* For small screen  */}
-      <div className="flex bg-cover bg-no-repeat bg-center bg-baige     shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] h-20  flex-row justify-between md:hidden">
+      <div className="flex bg-cover bg-no-repeat bg-center bg-baige shadow-md  h-20  flex-row justify-between md:hidden">
         <div className="flex absolute w-full z-50 p-5  justify-between items-center">
           <Link href={"/"}>
             <Image src={"/dbGreen.svg"} alt="DB Logo" width={70} height={70} />
