@@ -1,4 +1,4 @@
-import { CalendarCheck, Languages, ShieldCheck, Users } from "lucide-react";
+import { CalendarCheck, Clock, Cloud, CloudCog, Languages, ShieldCheck, Users } from "lucide-react";
 import React from "react";
 import ObjectiveCard from "../ui/ObjectiveCard";
 
@@ -10,7 +10,7 @@ function WhyDB(): JSX.Element {
         <ObjectiveCard
           index={1}
           icon={
-            <Users
+            <Clock
               className="rounded-full bg-pastelGreen p-4"
               color="black"
               width={65}
@@ -18,13 +18,14 @@ function WhyDB(): JSX.Element {
             />
           }
           title="Objective 01"
-          desc="With Drone Buddy you don't have to manage large teams for training, commissioning and service, so you can focus on innovation."
+          desc="Reduce service downtime and economic loss by 80%.
+          "
         />
         <ObjectiveCard
           index={2}
           title={"Objective 02"}
           icon={
-            <CalendarCheck
+            <CloudCog
               className="rounded-full bg-pastelViolet p-4"
               color="black"
               width={65}
@@ -32,7 +33,7 @@ function WhyDB(): JSX.Element {
             />
           }
           desc={
-            "Give your clients fastest service time, saving huge on economic loss due to accidents."
+            "One of its kind cloud infra bringing info on fingertips and catering to all the parties involved for the long term prosperity."
           }
         />
       </div>
@@ -55,7 +56,7 @@ function WhyDB(): JSX.Element {
         <ObjectiveCard
           index={4}
           icon={
-            <ShieldCheck
+            <Users
               className="rounded-full bg-baige p-4"
               color="black"
               width={65}
@@ -64,7 +65,7 @@ function WhyDB(): JSX.Element {
           }
           title={"Objective 04"}
           desc={
-            "From Insurance , spare parts, configuring drones, managing complete drone information for clients. We do it all."
+            "Service available for corporate and retail customers, helping all to compete in the healthy environment."
           }
         />
       </div>

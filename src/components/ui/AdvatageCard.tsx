@@ -27,7 +27,7 @@ function AdvatageCard({
       }}
       viewport={{ once: true }}
       className={classNames(
-        "  flex flex-col items-center justify-center   shadow-md shadow-gray-300 mx-10 my-4 md:w-[28%] gap-6 p-8 rounded-xl ",
+        "  flex flex-col items-center justify-center shadow-md shadow-gray-300 mx-10 my-4 md:w-[40%] gap-6 p-8 rounded-xl ",
         bg
       )}
     >

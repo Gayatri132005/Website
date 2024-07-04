@@ -39,7 +39,10 @@ function Footer(): JSX.Element {
           transition={{ duration: 0.5, delay: 0.2, y: 90 }}
           className="flex flex-col  md:w-[40%] md:mr-28"
         >
-          <h2 className="font-bold my-4">DB</h2>
+          {/* <h2 className="font-bold my-4">DB</h2>
+           */}
+                     <Image className="mb-4" src={"/DBGreen.svg"} alt="DB Logo" width={70} height={70} />
+
           <p>India&apos;s first integrated drone service company.</p>
           <hr className="border-white my-4" />
           <div className="flex flex-col gap-2">
@@ -58,12 +61,36 @@ function Footer(): JSX.Element {
           className="flex flex-col mt-4 gap-2 md:mr-28"
         >
           <h4 className="font-bold">Social Media</h4>
-          <p>Facebook</p>
-          <p>Instagram</p>
-          <p>Twitter</p>
-          <p>Linkedin</p>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/profile.php?id=100091867800906"
+          >
+            Facebook
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/mamadrones_/"
+          >
+            Instagram
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/mamaapp_  "
+          >
+            Twitter
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/company/91104942/admin/feed/posts/"
+          >
+            Linkedin
+          </a>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           ref={footerRef}
           initial={{ opacity: 0 }}
           animate={controls}
@@ -71,14 +98,13 @@ function Footer(): JSX.Element {
           className="flex flex-col gap-2 mt-4"
         >
           <h4 className="font-bold">Help and Support</h4>
-          <p>About Us</p>
           <p>Contact Us</p>
           <Link href={"/terms-and-conditions"}>
             <p className=" hover:underline hover:text transition-all  duration-100 ">
               Terms and Conditions
             </p>
           </Link>
-        </motion.div>
+        </motion.div> */}
       </>
     </footer>
   );

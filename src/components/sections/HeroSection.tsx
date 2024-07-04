@@ -26,12 +26,12 @@ function HeroSection() {
           remote areas, offering top-notch drone education, repair services, and
           multilingual customer support with unmatched speed and quality.
         </h4>
-        <Button
+        {/* <Button
           className=" mt-6 rounded-full w-full md:w-[30%] p-7 text-custom-p-sm md:text-custom-p "
           variant={"outline"}
         >
           Learn More <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
+        </Button> */}
       </motion.div>
       <motion.div
         initial={{ opacity: 0 }}

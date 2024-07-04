@@ -8,11 +8,7 @@ function ContactUsSection() {
         Get in touch today
         <span className="text-pastelGreen font-extrabold text-6xl">.</span>
       </h1>
-      <p className="text-center mt-4 ">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ea hic
-        repudiandae
-        <br /> sapiente doloribus veniam praesentium, doloremque ab aliquid
-      </p>
+      
       <div className=" gap-16  md:gap-24 pt-16  flex text-center items-center justify-center flex-col md:flex-row">
         <div className="flex flex-col items-center justify-center gap-4">
           <Navigation className="h-12 w-12 self-center" />

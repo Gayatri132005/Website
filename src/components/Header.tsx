@@ -1,27 +1,52 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 function Header(): JSX.Element {
   const [showMenu, setShowMenu] = useState(false);
+  const handleScroll = (event) => {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
-    <header className=" inset-x-0 top-0 z-20">
+    <header className=" inset-x-0 top-0 z-20 ">
       {/* For Large Screen */}
-      <div className="flex flex-row justify-around shadow-2   border-slate-300 items-center   bg-baige shadow-black">
+      <div className="flex flex-row justify-around shadow-2 p-4   border-slate-300 items-center   bg-baige shadow-black">
         <Link href={"/"} className="hidden md:flex">
-          <h2 className="py-6 font-bold mx-2 ">DB</h2>
+          <Image src={"/DBGreen.svg"} alt="DB Logo" width={70} height={70} />
         </Link>
-        <div className="hidden md:flex flex-col text-lg items-center md:flex-row gap-8">
-          <p className="font-semibold">Home</p>
-          <p className="font-semibold">Lifecycle</p>
-          <p className="font-semibold">Features</p>
-          <a href="#advantages" className="font-semibold">Advantages</a>
-          <p className="font-semibold">FAQ</p>
+        <div className="hidden md:flex cursor-pointer flex-col text-lg items-center md:flex-row gap-8">
+          {/* <a className="font-semibold">Home</a> */}
+          {/* <a onClick={handleScroll} href="#process" className="font-semibold">
+            Process
+          </a>
+          <a onClick={handleScroll} href="#why-db" className="font-semibold">
+            Why us?
+          </a>
+          <a
+            onClick={handleScroll}
+            href="#advantages"
+            className="font-semibold"
+          >
+            Advantages
+          </a>
+          <a onClick={handleScroll} href={"#faq"} className="font-semibold">
+            FAQ
+          </a> */}
+          <a onClick={handleScroll} href={"#contact"} className="font-semibold">
+            Contact Us
+          </a>
           <p
             className="font-semibold"
             onClick={() => window.open("tel:9322418319")}
           >
-            Contact Us
+            Call Us
           </p>
           {/* <Select>
             <SelectTrigger className="w-[180px] border-none outline-none ">
@@ -42,7 +67,8 @@ function Header(): JSX.Element {
       <div className="flex bg-cover bg-no-repeat bg-center bg-baige    shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] h-20  flex-row justify-between md:hidden">
         <div className="flex absolute w-full z-50 p-5  justify-between items-center">
           <Link href={"/"}>
-            <h2 className="font-bold">DB</h2>
+          <Image src={"/DBGreen.svg"} alt="DB Logo" width={70} height={70} />
+
           </Link>
           <div
             onClick={() => setShowMenu(!showMenu)}
@@ -64,15 +90,24 @@ function Header(): JSX.Element {
               showMenu ? "translate-y-60" : "-translate-y-60 opacity-0"
             } flex justify-center flex-col gap-6 items-center text-center transition-all duration-700 ease-in-out`}
           >
-            <p className="font-semibold">Home</p>
-            <p className="font-semibold">Lifecycle</p>
-            <p className="font-semibold">Features</p>
-            <p className="font-semibold">FAQ</p>
+            {/* <a className="font-semibold">Home</a>
+            <a href="#process" className="font-semibold">
+              Process
+            </a>
+            <a className="font-semibold">Features</a>
+            <a className="font-semibold">FAQ</a> */}
+            <a
+              onClick={handleScroll}
+              href={"#contact"}
+              className="font-semibold"
+            >
+              Contact Us
+            </a>
             <p
               className="font-semibold"
               onClick={() => window.open("tel:9322418319")}
             >
-              Contact Us
+              Call Us
             </p>
             {/* <Button className="bg-[#15D783]"  variant="outline"> Contact us!</Button> */}
 

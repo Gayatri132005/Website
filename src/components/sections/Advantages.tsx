@@ -13,7 +13,7 @@ function Advantages(): JSX.Element {
         Let us take care of the easy part, while you do the innovations.
       </p>
 
-      <div className="flex flex-col md:flex-row item-center justify-between pt-20">
+      <div className="flex flex-col md:flex-row item-center justify-between  pt-20">
         <AdvatageCard delay={0.3} bg="bg-[#BBE9FF]">
           <Brain width={60} height={60} />
           <p>
