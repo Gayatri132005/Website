@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 function Header(): JSX.Element {
   const [showMenu, setShowMenu] = useState(false);
-  const handleScroll = (event) => {
+  const handleScroll = (event:any) => {
     event.preventDefault();
     const targetId = event.currentTarget.getAttribute("href").substring(1);
     const targetElement = document.getElementById(targetId);
