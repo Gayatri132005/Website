@@ -24,15 +24,13 @@ function Advantages(): JSX.Element {
         <AdvatageCard delay={0.6} bg="bg-[#FFFED3]">
           <Users width={60} height={60} />
           <p>
-            Clients can focus on innovation of the product and better technology
-            while we take care of easy part
+          Clients can directly start services pan India sales and service from Day 1 as we evolve, they can be stress free about operations.
           </p>
         </AdvatageCard>
         <AdvatageCard delay={0.9} bg="bg-[#FFE9D0]">
           <Computer width={60} height={60} />
           <p>
-            Clients can focus on innovation of the product and better technology
-            while we take care of easy part
+          With mama drones software, the accountability, flexibility and ease of doing business increases drastically.
           </p>
         </AdvatageCard>
       </div>
