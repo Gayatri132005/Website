@@ -5,8 +5,9 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 function Header(): JSX.Element {
   const [showMenu, setShowMenu] = useState(false);
-  const handleScroll = (event:any) => {
+  const handleScroll = (event: any) => {
     event.preventDefault();
+    setShowMenu(false);
     const targetId = event.currentTarget.getAttribute("href").substring(1);
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
@@ -70,8 +71,7 @@ function Header(): JSX.Element {
       <div className="flex bg-cover bg-no-repeat bg-center bg-baige     shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] h-20  flex-row justify-between md:hidden">
         <div className="flex absolute w-full z-50 p-5  justify-between items-center">
           <Link href={"/"}>
-          <Image src={"/dbGreen.svg"} alt="DB Logo" width={70} height={70} />
-
+            <Image src={"/dbGreen.svg"} alt="DB Logo" width={70} height={70} />
           </Link>
           <div
             onClick={() => setShowMenu(!showMenu)}
@@ -100,33 +100,37 @@ function Header(): JSX.Element {
             <a className="font-semibold">Features</a>
             <a className="font-semibold">FAQ</a> */}
             <a onClick={handleScroll} href="#process" className="font-semibold">
-            Process
-          </a>
-          <a onClick={handleScroll} href="#why-db" className="font-semibold">
-            Why us?
-          </a>
-          <a onClick={handleScroll} href="#steps" className="font-semibold">
-            Steps
-          </a>
-          <a
-            onClick={handleScroll}
-            href="#advantages"
-            className="font-semibold"
-          >
-            Advantages
-          </a>
-          <a onClick={handleScroll} href={"#faq"} className="font-semibold">
-            FAQ
-          </a>
-          <a onClick={handleScroll} href={"#contact"} className="font-semibold">
-            Contact Us
-          </a>
-          <p
-            className="font-semibold"
-            onClick={() => window.open("tel:9322418319")}
-          >
-            Call Us
-          </p>
+              Process
+            </a>
+            <a onClick={handleScroll} href="#why-db" className="font-semibold">
+              Why us?
+            </a>
+            <a onClick={handleScroll} href="#steps" className="font-semibold">
+              Steps
+            </a>
+            <a
+              onClick={handleScroll}
+              href="#advantages"
+              className="font-semibold"
+            >
+              Advantages
+            </a>
+            <a onClick={handleScroll} href={"#faq"} className="font-semibold">
+              FAQ
+            </a>
+            <a
+              onClick={handleScroll}
+              href={"#contact"}
+              className="font-semibold"
+            >
+              Contact Us
+            </a>
+            <p
+              className="font-semibold"
+              onClick={() => window.open("tel:9322418319")}
+            >
+              Call Us
+            </p>
             {/* <Button className="bg-[#15D783]"  variant="outline"> Contact us!</Button> */}
 
             {/* <Select>
