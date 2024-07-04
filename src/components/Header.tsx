@@ -23,11 +23,14 @@ function Header(): JSX.Element {
         </Link>
         <div className="hidden md:flex cursor-pointer flex-col text-lg items-center md:flex-row gap-8">
           {/* <a className="font-semibold">Home</a> */}
-          {/* <a onClick={handleScroll} href="#process" className="font-semibold">
+          <a onClick={handleScroll} href="#process" className="font-semibold">
             Process
           </a>
           <a onClick={handleScroll} href="#why-db" className="font-semibold">
             Why us?
+          </a>
+          <a onClick={handleScroll} href="#steps" className="font-semibold">
+            Steps
           </a>
           <a
             onClick={handleScroll}
@@ -38,7 +41,7 @@ function Header(): JSX.Element {
           </a>
           <a onClick={handleScroll} href={"#faq"} className="font-semibold">
             FAQ
-          </a> */}
+          </a>
           <a onClick={handleScroll} href={"#contact"} className="font-semibold">
             Contact Us
           </a>
@@ -64,7 +67,7 @@ function Header(): JSX.Element {
         </div>
       </div>
       {/* For small screen  */}
-      <div className="flex bg-cover bg-no-repeat bg-center bg-baige    shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] h-20  flex-row justify-between md:hidden">
+      <div className="flex bg-cover bg-no-repeat bg-center bg-baige     shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] h-20  flex-row justify-between md:hidden">
         <div className="flex absolute w-full z-50 p-5  justify-between items-center">
           <Link href={"/"}>
           <Image src={"/dbGreen.svg"} alt="DB Logo" width={70} height={70} />
@@ -96,19 +99,34 @@ function Header(): JSX.Element {
             </a>
             <a className="font-semibold">Features</a>
             <a className="font-semibold">FAQ</a> */}
-            <a
-              onClick={handleScroll}
-              href={"#contact"}
-              className="font-semibold"
-            >
-              Contact Us
-            </a>
-            <p
-              className="font-semibold"
-              onClick={() => window.open("tel:9322418319")}
-            >
-              Call Us
-            </p>
+            <a onClick={handleScroll} href="#process" className="font-semibold">
+            Process
+          </a>
+          <a onClick={handleScroll} href="#why-db" className="font-semibold">
+            Why us?
+          </a>
+          <a onClick={handleScroll} href="#steps" className="font-semibold">
+            Steps
+          </a>
+          <a
+            onClick={handleScroll}
+            href="#advantages"
+            className="font-semibold"
+          >
+            Advantages
+          </a>
+          <a onClick={handleScroll} href={"#faq"} className="font-semibold">
+            FAQ
+          </a>
+          <a onClick={handleScroll} href={"#contact"} className="font-semibold">
+            Contact Us
+          </a>
+          <p
+            className="font-semibold"
+            onClick={() => window.open("tel:9322418319")}
+          >
+            Call Us
+          </p>
             {/* <Button className="bg-[#15D783]"  variant="outline"> Contact us!</Button> */}
 
             {/* <Select>

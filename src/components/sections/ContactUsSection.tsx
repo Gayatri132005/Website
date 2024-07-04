@@ -1,5 +1,5 @@
 import React from "react";
-import {  Mail, Navigation, Phone } from "lucide-react";
+import { Mail, Navigation, Phone } from "lucide-react";
 
 function ContactUsSection() {
   return (
@@ -8,7 +8,7 @@ function ContactUsSection() {
         Get in touch today
         <span className="text-pastelGreen font-extrabold text-6xl">.</span>
       </h1>
-      
+
       <div className=" gap-16  md:gap-24 pt-16  flex text-center items-center justify-center flex-col md:flex-row">
         <div className="flex flex-col items-center justify-center gap-4">
           <Navigation className="h-12 w-12 self-center" />
@@ -16,7 +16,7 @@ function ContactUsSection() {
             <h3 className="font-medium">Office</h3>
             <p>
               Choriya Layout, Wani,
-              <br /> Yavatmal, India
+              <br /> Maharashtra, India 445 304
             </p>
           </div>
         </div>
@@ -32,8 +32,8 @@ function ContactUsSection() {
           <Phone className="h-12 w-12 self-center" />
 
           <div>
-            <h3 className="font-medium">Email</h3>
-            <p>+91 9730554790</p>
+            <h3 className="font-medium">Phone Number</h3>
+            <p onClick={() => window.open("tel:9322418319")}>+91 9322418319</p>
           </div>
         </div>
       </div>
