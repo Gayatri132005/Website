@@ -41,7 +41,13 @@ function Footer(): JSX.Element {
         >
           {/* <h2 className="font-bold my-4">DB</h2>
            */}
-                     <Image className="mb-4" src={"/DBGreen.svg"} alt="DB Logo" width={70} height={70} />
+          <Image
+            className="mb-4"
+            src={"/dbGreen.svg"}
+            alt="DB Logo"
+            width={70}
+            height={70}
+          />
 
           <p>India&apos;s first integrated drone service company.</p>
           <hr className="border-white my-4" />

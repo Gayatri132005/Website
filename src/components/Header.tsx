@@ -19,7 +19,7 @@ function Header(): JSX.Element {
       {/* For Large Screen */}
       <div className="flex flex-row justify-around shadow-2 p-4   border-slate-300 items-center   bg-baige shadow-black">
         <Link href={"/"} className="hidden md:flex">
-          <Image src={"/DBGreen.svg"} alt="DB Logo" width={70} height={70} />
+          <Image src={"/dbGreen.svg"} alt="DB Logo" width={70} height={70} />
         </Link>
         <div className="hidden md:flex cursor-pointer flex-col text-lg items-center md:flex-row gap-8">
           {/* <a className="font-semibold">Home</a> */}
@@ -67,7 +67,7 @@ function Header(): JSX.Element {
       <div className="flex bg-cover bg-no-repeat bg-center bg-baige    shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] h-20  flex-row justify-between md:hidden">
         <div className="flex absolute w-full z-50 p-5  justify-between items-center">
           <Link href={"/"}>
-          <Image src={"/DBGreen.svg"} alt="DB Logo" width={70} height={70} />
+          <Image src={"/dbGreen.svg"} alt="DB Logo" width={70} height={70} />
 
           </Link>
           <div
