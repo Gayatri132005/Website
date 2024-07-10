@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const poppins_init = Poppins({
   subsets: ["latin"],
-  weight: ["100", "300", "400",'600', "700", "500"],
-  variable:'--font-roboto'
+  weight: ["100", "300", "400", "600", "700", "500"],
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
   title: "Drone Buddy",
   description: "Drone buddy",
+  icons: {
+    icon: "/dbGreen.svg",
+  },
 };
 
 export default function RootLayout({
@@ -20,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/dbGreen.svg" />
+      </Head>
       <body className={poppins_init.className}>{children}</body>
     </html>
   );
