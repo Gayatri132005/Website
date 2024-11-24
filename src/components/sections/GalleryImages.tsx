@@ -6,8 +6,8 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Card, CardContent } from '../ui/card'
 import Image from 'next/image'
+import { Card, CardContent } from '../ui/Card'
 
 const GalleryImageUrls = [
     { url: 'https://res.cloudinary.com/dkjku8mqe/image/upload/v1732450797/DroneBuddy/pd47uzsqgr9qn7sj3vvh.jpg' },
