@@ -7,6 +7,7 @@ import { motion, useAnimation } from "framer-motion";
 function Footer(): JSX.Element {
   const controls = useAnimation();
   const footerRef = useRef(null);
++
 
   useEffect(() => {
     const observer = new IntersectionObserver(

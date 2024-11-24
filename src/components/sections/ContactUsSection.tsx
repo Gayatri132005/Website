@@ -33,7 +33,7 @@ function ContactUsSection() {
 
           <div>
             <h3 className="font-medium">Phone Number</h3>
-            <p onClick={() => window.open("tel:9322418319")}>+91 9322418319</p>
+            <p className=" cursor-pointer" onClick={() => window.open("tel:9322418319")}>+91 9322418319</p>
           </div>
         </div>
       </div>

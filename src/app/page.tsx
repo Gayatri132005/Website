@@ -10,6 +10,8 @@ import WhyDB from "@/components/sections/WhyDB";
 import Steps, { HowWeDoIt } from "@/components/sections/Steps";
 import Advantages from "@/components/sections/Advantages";
 import useMediaQuery from "@/utils/useMediaQuery";
+import DronebuddyCenters from "@/components/sections/DronebuddyCenters";
+import GalleryImages from "@/components/sections/GalleryImages";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -54,6 +56,12 @@ export default function Home() {
       </section>
       <section id="advantages">
         <Advantages />
+      </section>
+      <section id="dronebuddy-centers">
+        <DronebuddyCenters />
+      </section>
+      <section id="gallery">
+        <GalleryImages />
       </section>
       <section id="faq">
         <FAQSection />

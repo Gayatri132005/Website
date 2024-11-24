@@ -85,6 +85,9 @@
   .p {
     @apply text-custom-p;
   }
+  .a {
+    @apply text-custom-p
+  }
 }
 
 @media (max-width: 768px) {
@@ -106,6 +109,9 @@
   p,
   .p {
     @apply text-custom-p-sm;
+  }
+  .a {
+    @apply text-custom-p-sm
   }
 }
 @layer base {

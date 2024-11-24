@@ -1,6 +1,6 @@
 import React from "react";
 import { features } from "@/data/featutes";
-import Card from "@/components/ui/Card";
+import InfoCard from "@/components/ui/InfoCard";
 import Lenis from "@studio-freight/lenis";
 import { useRef, useEffect } from "react";
 import { useScroll, useTransform } from "framer-motion";
@@ -32,7 +32,7 @@ function ProcessSection() {
       {features.map((feature, i) => {
         const targetScale = 1 - (features.length - i) * 0.05;
         return (
-          <Card
+          <InfoCard
             key={`p_${i}`}
             i={i}
             {...feature}
