@@ -1,44 +1,19 @@
-import React from "react";
+"use client";
+
 import { Mail, Navigation, Phone } from "lucide-react";
+import "../../styles/ContactUsSection.css";
 
-function ContactUsSection() {
+export default function ContactSection() {
   return (
-    <section className=" flex py-20 px-6 flex-col items-center bg-baige w-full">
-      <h1 className="font-bold text-center leading-tight">
-        Get in touch today
-        <span className="text-pastelGreen font-extrabold text-6xl">.</span>
-      </h1>
-
-      <div className=" gap-16  md:gap-24 pt-16  flex text-center items-center justify-center flex-col md:flex-row">
-        <div className="flex flex-col items-center justify-center gap-4">
-          <Navigation className="h-12 w-12 self-center" />
-          <div>
-            <h3 className="font-medium">Office</h3>
-            <p>
-              Choriya Layout, Wani,
-              <br /> Maharashtra, India 445 304
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <Mail className="h-12 w-12 self-center" />
-
-          <div>
-            <h3 className="font-medium">Email</h3>
-            <p>bordedheeraj.77@gmail.com</p>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <Phone className="h-12 w-12 self-center" />
-
-          <div>
-            <h3 className="font-medium">Phone Number</h3>
-            <p className=" cursor-pointer" onClick={() => window.open("tel:9322418319")}>+91 9322418319</p>
-          </div>
-        </div>
-      </div>
+    
+    <section className="flex flex-col justify-between  w-full max-w-[1200px] mx-auto py-20 px-6 ">
+     <h1 className="font-bold text-3xl md:text-4xl text-green-600 justify-center items-center text-center">
+            Get in touch today
+          </h1>
+      {/* Right Section - Form */}
+   
+      <div id="ff-compose"></div>
+      <script async defer src="https://formfacade.com/include/100008665769197071428/form/1FAIpQLSdpDjN5SudOMl7jEDnG54EAVEoZiBelnPecw26mN8WDFXwE8w/classic.js?div=ff-compose"></script>
     </section>
   );
 }
-
-export default ContactUsSection;

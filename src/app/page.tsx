@@ -1,4 +1,6 @@
+
 "use client";
+
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import React, { useEffect, useState } from "react";
@@ -67,7 +69,9 @@ export default function Home() {
         <FAQSection />
       </section>
       <section id="contact">
+      <div className="p-4 max-w-3xl mx-auto">
         <ContactUsSection />
+        </div>
       </section>
       <Footer />
     </main>
