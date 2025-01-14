@@ -9,7 +9,7 @@ import FAQSection from "@/components/sections/FAQSection";
 import HeroSection from "@/components/sections/HeroSection";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import WhyDB from "@/components/sections/WhyDB";
- import NewSteps, { HowWeDoIt } from "@/components/sections/Steps";
+ import NewSteps  from "@/components/sections/Steps";
 import Advantages from "@/components/sections/Advantages";
 import useMediaQuery from "@/utils/useMediaQuery";
 import DronebuddyCenters from "@/components/sections/DronebuddyCenters";
