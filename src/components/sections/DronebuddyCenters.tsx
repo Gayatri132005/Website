@@ -1,81 +1,114 @@
-import React, { useState } from "react";
-import {
-  GoogleMap,
-  InfoWindow,
-  Marker,
-  LoadScript,
-} from "@react-google-maps/api";
+import React, { useState, useEffect } from "react";
 
-const markers = [
-  {
-    id: 1,
-    name: "DroneBuddy Center - Location 1",
-    position: { lat: 19.893683, lng: 75.354717 },
-  },
-  {
-    id: 2,
-    name: "DroneBuddy Center - Location 2",
-    position: { lat: 20.0548146, lng: 78.94204239999999 },
-  },
-];
 function DronebuddyCenters() {
-  const [activeMarker, setActiveMarker] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const handleActiveMarker = (marker: React.SetStateAction<null>) => {
-    if (marker === activeMarker) {
-      return;
+  useEffect(() => {
+    const section = document.querySelector(".section-138");
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (section) {
+      observer.observe(section);
     }
-    setActiveMarker(marker);
-  };
 
-  const handleOnLoad = (map: {
-    fitBounds: (arg0: google.maps.LatLngBounds) => void;
-  }) => {
-    const bounds = new google.maps.LatLngBounds(); // Ensure google object is available
-    markers.forEach(({ position }) => bounds.extend(position));
-    map.fitBounds(bounds);
-  };
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col md:flex-row items-center justify-around min-h-screen p-6">
-      <div className="md:w-[50%] flex items-center justify-center">
-        <h2 className="font-bold text-center">
+    <div className="relative flex flex-col md:flex-row items-center justify-around min-h-screen p-6 section-138">
+      {/* Drone Animation - Multiple Drones */}
+      
+
+      {/* Content Section */}
+      <div className="md:w-[50%] flex flex-col items-start justify-center text-center md:text-left px-4">
+        <h2 className="font-bold text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] mb-4 relative z-10">
           DroneBuddy Centers - Find Our Locations
         </h2>
+        <p className="text-gray-600 text-[0.875rem] sm:text-[1rem] md:text-[1.125rem] lg:text-[1.25rem]">
+          Discover our centers and explore our innovative drone solutions.
+        </p>
       </div>
-      <div className="md:w-[50%] w-[] items-center flex justify-center">
-        {/* <iframe style={{ border: 0, marginTop: -100 }} src="https://www.google.com/maps/d/u/0/embed?mid=165FMC0w7evoO8jPofSZxsQpQ-MMa7XU&ehbc=2E312F&noprof=1" width="100%" height="500" frameBorder='0'></iframe> */}
+
+      {/* Map Section */}
+      <div className="md:w-[50%] flex items-center justify-center mt-8 md:mt-0">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.7285018071602!2d75.35213771154433!3d19.89368298140945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba355e9d6b639%3A0x3e7043dc842aa942!2sMama%20Drones!5e0!3m2!1sen!2sin!4v1732448051711!5m2!1sen!2sin"
-          width="500"
+          width="100%"
           height="500"
           style={{ border: 0 }}
-          className="md:w-[500px] md:h-[500px] w-[300px] h-[300px] "
+          className="w-full h-[300px] sm:h-[400px] md:h-[500px] md:w-[600px]"
           allowFullScreen
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-        {/* <LoadScript googleMapsApiKey={process.env.GCP_API_KEY??""}>
-                    <GoogleMap
-                        onLoad={handleOnLoad}
-                        onClick={() => setActiveMarker(null)}
-                        mapContainerStyle={{ width: "100%", height: "500px" }} // Adjust size as necessary
-                    >
-                        {markers.map(({ id, name, position }) => (
-                            <Marker
-                                key={id}
-                                position={position}
-                                onClick={() => handleActiveMarker(id)}
-                            >
-                                {activeMarker === id ? (
-                                    <InfoWindow onCloseClick={() => setActiveMarker(null)}>
-                                        <div>{name}</div>
-                                    </InfoWindow>
-                                ) : null}
-                            </Marker>
-                        ))}
-                    </GoogleMap>
-                </LoadScript> */}
       </div>
+
+      {/* Custom CSS Styling */}
+      <style jsx>{`
+        @keyframes droneFly1 {
+          0% {
+            transform: translateY(-200px);
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(200px);
+            opacity: 1;
+          }
+        }
+
+        .drone-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .animate-drone-1 {
+          animation: droneFly1 4s ease-in-out forwards;
+        }
+
+        /* Responsive Typography */
+        html {
+          font-size: 16px; /* Default for desktop */
+        }
+
+        @media (max-width: 1200px) {
+          html {
+            font-size: 15px;
+          }
+        }
+
+        @media (max-width: 992px) {
+          html {
+            font-size: 14px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          html {
+            font-size: 13px;
+          }
+        }
+
+        @media (max-width: 576px) {
+          html {
+            font-size: 12px;
+          }
+        }
+      `}</style>
     </div>
   );
 }

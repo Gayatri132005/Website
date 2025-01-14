@@ -1,74 +1,84 @@
 import React from "react";
-import { FeatureTitle } from "../features/title";
-import { Step1, Step2, Step3, Step4 } from "../features/card";
-import { HandCoins, Handshake, MonitorSmartphone } from "lucide-react";
-import Image from "next/image";
+import { FaSprayCan, FaTools, FaShoppingCart } from "react-icons/fa";
 
-export const HowWeDoIt = [
-  {
-    id: "1",
-    title: "STEP-1",
-    desc: "Collaborate with companies and get knowledge transfer  for technology,  maintainence to select technicians. The magic start once drone is deliverd,",
-    card: Step1,
-    icon: <Handshake width={80} height={80} />,
-    gradient: "from-[#f7f0ff] to-[#a78afe]",
-  },
-  {
-    id: "2",
-    title: "STEP-2",
-    desc: " We do commisioning while you monitor the complete process, with our app user can rate the experience, then comes the service part.",
-    card: Step2,
-    icon: <MonitorSmartphone width={80} height={80} />,
-    gradient: "from-[#f5fbff] to-[#addeff]",
-  },
-  {
-    id: "3",
-    title: "STEP-3",
-    desc: "User can track there service reports, and immediately ask for service request via droneBuddy software.",
-    card: Step3,
-    icon: (
-      <Image src="/customer-care-icon.svg" alt="step2" width={80} height={80} />
-    ),
-    gradient: "from-[#f5fff7] to-[#adf8ff]",
-  },
-  {
-    id: "4",
-    title: "STEP-4",
-    desc: "We take care of Insurance*, spare parts, software reports, and make sure your customers get the best experience.",
-    card: Step4,
-    icon: <HandCoins width={80} height={80} />,
-    gradient: "from-[#f7fff5] to-[#adffd8]",
-  },
-];
-
-function Steps(): JSX.Element {
+function NewSteps() {
   return (
-    <>
-      <section className="mx-auto hidden md:block  max-w-6xl px-4">
-        {/* <h2 className="text-start self-start font-bold">How do we do it?</h2> */}
-        <div className="flex w-full items-start gap-20">
-          <div className="w-full py-[20svh] ">
-            <ul>
-              <h2 className=" font-bold pb-40">How do we do it?</h2>
-              {HowWeDoIt.map((item) => (
-                <li key={item.title}>
-                  <FeatureTitle id={item.title}>{item.desc}</FeatureTitle>
-                  {/* <p>{item.desc}</p> */}
-                </li>
-              ))}
-            </ul>
+    <section className="py-20 bg-gradient-to-br from-green-50 to-green-50">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <h1 className="font-bold text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-gray-900 mb-6">
+            Revolutionizing Farming with Agri Drone Center
+          </h1>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            Kisan Agri Drone is a cutting-edge agricultural tool designed to
+            revolutionize farming efficiency. It delivers precise, reliable, and
+            sustainable solutions for effective crop management.
+          </p>
+        </div>
+
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Left Section: Image */}
+          <div className="w-full lg:w-1/2 relative">
+            <img
+              src="https://res.cloudinary.com/dfly9upu9/image/upload/v1736851562/drone2-removebg-preview_wmtyhi.png"
+              alt="Kisan Agri Drone"
+              className="w-4/5 h-auto rounded-lg transform hover:scale-105 transition duration-300 mx-auto"
+            />
           </div>
-          <div className=" sticky  top-0 flex items-center justify-center h-screen w-full">
-            <div className=" relative aspect-square  w-[50%] h-[30%]  rounded-2xl">
-              {HowWeDoIt.map((item) => (
-                <item.card key={item.title} id={item.title} />
-              ))}
+
+          {/* Right Section: Features */}
+          <div className="w-full lg:w-1/2 space-y-10">
+            {/* Precision Spraying */}
+            <div className="flex items-center group">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center shadow-md group-hover:bg-green-200 transition duration-300">
+                <FaSprayCan className="w-8 h-8 text-green-600 group-hover:text-green-800" />
+              </div>
+              <div className="ml-4">
+                <h3 className="text-xl font-bold text-gray-800 group-hover:text-green-800">
+                  Precision Spraying
+                </h3>
+                <p className="text-gray-600 group-hover:text-gray-800">
+                  Achieve accurate spraying for better crop yield and reduced
+                  wastage.
+                </p>
+              </div>
+            </div>
+
+            {/* Expert Repairs */}
+            <div className="flex items-center group">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center shadow-md group-hover:bg-blue-200 transition duration-300">
+                <FaTools className="w-8 h-8 text-blue-600 group-hover:text-blue-800" />
+              </div>
+              <div className="ml-4">
+                <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-800">
+                  Expert Repairs
+                </h3>
+                <p className="text-gray-600 group-hover:text-gray-800">
+                  Our professionals ensure your drones are always mission-ready.
+                </p>
+              </div>
+            </div>
+
+            {/* Purchase Drone */}
+            <div className="flex items-center group">
+              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center shadow-md group-hover:bg-yellow-200 transition duration-300">
+                <FaShoppingCart className="w-8 h-8 text-yellow-600 group-hover:text-yellow-800" />
+              </div>
+              <div className="ml-4">
+                <h3 className="text-xl font-bold text-gray-800 group-hover:text-yellow-800">
+                  Purchase Drone
+                </h3>
+                <p className="text-gray-600 group-hover:text-gray-800">
+                  Get the best drones designed for modern agricultural needs.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
-export default Steps;
+export default NewSteps;

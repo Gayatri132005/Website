@@ -105,7 +105,8 @@ function Footer(): JSX.Element {
             </a>
           </div>
         </motion.div>
-
+       <br></br>
+       <br></br>
         {/* Right Section - Additional Information */}
         <motion.div
           ref={footerRef}

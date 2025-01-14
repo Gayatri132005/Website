@@ -31,8 +31,8 @@ function ObjectiveCard({
       className="  rounded-xl md:w-[40%]  flex flex-col gap-2  "
     >
       {icon}
-      <h3 className="font-bold">{title}</h3>
-      <p>{desc}</p>
+      <h3 className="font-bold text-lg sm:text-xl md:text-2xl text-gray-800">{title}</h3>
+      <p className="text-sm sm:text-base text-gray-600">{desc}</p>
     </motion.div>
   );
 }

@@ -9,7 +9,7 @@ import FAQSection from "@/components/sections/FAQSection";
 import HeroSection from "@/components/sections/HeroSection";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import WhyDB from "@/components/sections/WhyDB";
-import Steps, { HowWeDoIt } from "@/components/sections/Steps";
+ import NewSteps, { HowWeDoIt } from "@/components/sections/Steps";
 import Advantages from "@/components/sections/Advantages";
 import useMediaQuery from "@/utils/useMediaQuery";
 import DronebuddyCenters from "@/components/sections/DronebuddyCenters";
@@ -39,8 +39,8 @@ export default function Home() {
         <WhyDB />
       </section>
       <section id="steps">
-        <Steps />
-        {!md && (
+        <NewSteps/>
+        {/* {!md && (
           <section className="flex md:hidden px-6 flex-col py-16">
             <h2 className="font-bold">How do we do it?</h2>
             {HowWeDoIt.map((item) => (
@@ -54,7 +54,7 @@ export default function Home() {
               </div>
             ))}
           </section>
-        )}
+        )} */}
       </section>
       <section id="advantages">
         <Advantages />
