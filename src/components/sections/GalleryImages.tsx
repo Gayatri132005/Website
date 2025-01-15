@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 
-// Gallery Image URLs
 const GalleryImageUrls = [
   {
     url: "https://res.cloudinary.com/dfly9upu9/image/upload/v1736739314/drone1_vf8zhm.webp",
@@ -30,7 +29,6 @@ const GalleryImageUrls = [
     title: "Comprehensive Training",
     description: "Learn from industry experts and master drone piloting skills.",
   },
-  // Added New Image
   {
     url: "https://res.cloudinary.com/dfly9upu9/image/upload/v1736740092/price_ms31pt.jpg",
     title: "Affordable Pricing",
@@ -54,92 +52,94 @@ function GalleryImages() {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-[#FBFBF3] relative">
-      {/* Centered Title */}
-      <h2 className="absolute top-12 text-3xl font-bold text-gray-800 text-center tracking-wide z-20">
+    <div className="min-h-screen w-full flex flex-col items-center justify-start bg-[#FBFBF3] pt-12 px-4">
+      {/* Heading */}
+      <h2 className="text-center font-bold text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-gray-800 mb-8">
         Explore Our Drone Services
       </h2>
 
-      <Carousel className="w-full max-w-4xl relative overflow-hidden rounded-2xl shadow-lg bg-gray-100 mt-16">
-        <CarouselContent
-          className="flex transition-transform duration-700"
-          style={{
-            transform: `translateX(-${activeIndex * 100}%)`,
-          }}
-        >
-          {GalleryImageUrls.map((image, index) => (
-            <CarouselItem
-              key={index}
-              className="flex-shrink-0 w-full h-[400px] sm:h-[500px] md:h-[600px] relative rounded-2xl overflow-hidden"
+      {/* Carousel */}
+      <div className="w-full max-w-4xl">
+        <Carousel className="relative overflow-hidden rounded-2xl shadow-lg bg-gray-100">
+          <CarouselContent
+            className="flex transition-transform duration-700"
+            style={{
+              transform: `translateX(-${activeIndex * 100}%)`,
+            }}
+          >
+            {GalleryImageUrls.map((image, index) => (
+              <CarouselItem
+                key={index}
+                className="flex-shrink-0 w-full h-[400px] sm:h-[500px] md:h-[600px] relative rounded-2xl overflow-hidden"
+              >
+                <Image
+                  src={image.url}
+                  alt={`Gallery image ${index + 1}`}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black via-transparent">
+                  <h3 className="text-white text-lg md:text-2xl font-bold mb-2">
+                    {image.title}
+                  </h3>
+                  <p className="text-white text-sm md:text-lg">
+                    {image.description}
+                  </p>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          {/* Navigation Arrows */}
+          <CarouselPrevious
+            onClick={handlePrevious}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-gray-700 bg-opacity-70 hover:bg-opacity-90 rounded-full shadow-lg"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              viewBox="0 0 24 24"
             >
-              <Image
-                src={image.url}
-                alt={`Gallery image ${index + 1}`}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black via-transparent">
-                <h3 className="text-white text-lg md:text-2xl font-bold mb-2">
-                  {image.title}
-                </h3>
-                <p className="text-white text-sm md:text-lg">
-                  {image.description}
-                </p>
-              </div>
-            </CarouselItem>
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </CarouselPrevious>
+          <CarouselNext
+            onClick={handleNext}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-gray-700 bg-opacity-70 hover:bg-opacity-90 rounded-full shadow-lg"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              viewBox="0 0 24 24"
+            >
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </CarouselNext>
+        </Carousel>
+
+        {/* Dots Navigation */}
+        <div className="flex justify-center space-x-2 mt-6">
+          {GalleryImageUrls.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveIndex(index)}
+              className={`w-3 h-3 rounded-full transition-all ${activeIndex === index ? "bg-gray-700" : "bg-gray-300"
+                }`}
+            ></button>
           ))}
-        </CarouselContent>
-
-        {/* Navigation Arrows */}
-        <CarouselPrevious
-          onClick={handlePrevious}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-gray-700 bg-opacity-70 hover:bg-opacity-90 rounded-full shadow-lg"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="white"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            viewBox="0 0 24 24"
-          >
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
-        </CarouselPrevious>
-        <CarouselNext
-          onClick={handleNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-gray-700 bg-opacity-70 hover:bg-opacity-90 rounded-full shadow-lg"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="white"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            viewBox="0 0 24 24"
-          >
-            <path d="M9 18l6-6-6-6" />
-          </svg>
-        </CarouselNext>
-      </Carousel>
-
-      {/* Dots for Navigation */}
-      <div className="flex justify-center space-x-2 mt-6">
-        {GalleryImageUrls.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setActiveIndex(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              activeIndex === index ? "bg-gray-700" : "bg-gray-300"
-            }`}
-          ></button>
-        ))}
+        </div>
       </div>
     </div>
   );
