@@ -30,6 +30,12 @@ const GalleryImageUrls = [
     title: "Comprehensive Training",
     description: "Learn from industry experts and master drone piloting skills.",
   },
+  // Added New Image
+  {
+    url: "https://res.cloudinary.com/dfly9upu9/image/upload/v1736740092/price_ms31pt.jpg",
+    title: "Affordable Pricing",
+    description: "Get the best value for top-tier drone services and products.",
+  },
 ];
 
 function GalleryImages() {
